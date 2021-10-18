@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_sign_up"
+    android:padding="@dimen/_20sdp"
+
+    tools:context=".Activity.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_220sdp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/name"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/ed_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:backgroundTint="@color/white"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/segoeui"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/ic_profile"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/mobile"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/ed_userMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0000000000"
+            android:backgroundTint="@color/white"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/segoeui"
+            android:maxLength="10"
+            android:drawableRight="@drawable/ic_icon_mobile"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/whitebgcurved"
+            android:gravity="center"
+            android:fontFamily="@font/segoeui"
+            android:paddingLeft="@dimen/_50sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingRight="@dimen/_50sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:text="@string/next"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/mainProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

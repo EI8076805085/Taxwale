@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Activity.ConsultantQueryActivity">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:tint="@color/black"
+            android:onClick="back"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/back_arrow"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_query"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/font_color"/>
+
+            <TextView
+                android:id="@+id/txt_minWords"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/min_words"
+                android:textSize="10sp"
+                android:textColor="@color/red"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:orientation="vertical"
+            android:background="@drawable/edit_textview_back">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:textSize="12sp"
+                android:textColor="@color/font_color"
+                android:gravity="start"
+                android:hint="@string/your_query_here"
+                android:background="@null"/>
+
+
+           <LinearLayout
+               android:id="@+id/query_imgLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:gravity="center_vertical"
+               android:visibility="gone"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_file_attachment"/>
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/_8sdp"
+                   android:layout_marginRight="@dimen/_8sdp"
+                   android:background="@drawable/edit_textview_back"
+                   android:gravity="center_vertical"
+                   android:layout_weight="1">
+
+                   <TextView
+                       android:id="@+id/txt_imageName"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:text="Screensort1234.png"
+                       android:textSize="12sp"
+                       android:padding="@dimen/_8sdp"
+                       android:singleLine="true"
+                       android:textColor="@color/font_color"/>
+
+                   <ImageView
+                       android:id="@+id/img_viewImage"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="@dimen/_5sdp"
+                       android:src="@drawable/ic_icon_eye"/>
+
+
+               </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/img_deleteSelectedImage"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_icon_delete"/>
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/query_recordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_voice"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:background="@drawable/edit_textview_back"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_playRecording"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:src="@drawable/ic_icon_play"/>
+
+                     <ImageView
+                        android:id="@+id/img_pouseRecording"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_icon_pause"/>
+
+                    <SeekBar
+                        android:id="@+id/seekbar_audio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxWidth="15dp"
+                        android:maxHeight="15dp"
+                        android:minWidth="15dp"
+                        android:minHeight="15dp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:progressDrawable="@drawable/custom_seekbar"
+                        android:thumb="@drawable/custom_thumb" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:textColor="@color/font_color"
+                        android:textSize="10sp"
+                        android:text="00:50"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_deleteRecording"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_icon_delete"/>
+
+
+            </LinearLayout>
+
+           <LinearLayout
+                android:id="@+id/main_sendLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:background="@drawable/edit_back_view"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/your_query_here"
+                        android:textSize="12sp"
+                        android:padding="@dimen/_8sdp"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:textColor="@color/font_color"/>
+
+                </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/img_attachImage"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/_2sdp"
+                   android:src="@drawable/ic_file_attachment"/>
+
+               <ImageView
+                   android:id="@+id/img_attachRecording"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/_8sdp"
+                   android:src="@drawable/ic_voice"/>
+
+
+            </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/record_audioLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+               <TextView
+                   android:id="@+id/txt_recordTimer"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/_2sdp"
+                   android:drawableLeft="@drawable/ic_voice_record_timers"
+                   android:drawablePadding="@dimen/_5sdp"
+                   android:textSize="8sp"
+                   android:src="@drawable/ic_file_attachment"/>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:gravity="center_vertical|right"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/txt_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CANCEL"
+                        android:textColor="@color/red"
+                        android:textSize="10sp"
+                        android:layout_marginLeft="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_sendRecording"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:src="@drawable/ic_send"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/ic_submit"/>
+
+
+    <TextView
+        android:id="@+id/txt_yourQueries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_submit"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/your_query"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/queryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_yourQueries"
+        tools:listitem="@layout/query_list" />
+
+
+</RelativeLayout>

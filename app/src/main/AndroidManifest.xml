@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ennovation.taxwale">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> <!-- Step 1: Add the following permission to the app -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- Step 2: This permission is depreciated in Android P -->
+     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-feature android:name="android.hardware.fingerprint" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Taxwale"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <activity android:name=".Activity.PayOnlineActivity"></activity>
+        <activity android:name=".Activity.ManualPayChallanActivity" />
+        <activity android:name=".Activity.PayTax" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".Activity.SentReciveDcoument" />
+        <activity android:name=".Activity.SentRecivedDocuments" />
+        <activity android:name=".Activity.DocumentsLIst" />
+        <activity android:name=".Activity.AccountManager" />
+        <activity android:name=".Activity.Language" />
+        <activity android:name=".Activity.Editprofile" />
+        <activity android:name=".Activity.ChangePassword" />
+        <activity android:name=".Activity.Documentverify" />
+        <activity android:name=".Activity.AddAddress" />
+        <activity android:name=".Activity.Address" />
+        <activity android:name=".Activity.Viewtickets" />
+        <activity android:name=".Activity.Help" />
+        <activity android:name=".Activity.Profile" />
+        <activity android:name=".Activity.ConsultantQueryActivity" />
+        <activity android:name=".Activity.OTPVeryfication" />
+        <activity android:name=".Activity.OTPActivity" />
+        <activity android:name=".Activity.WelcomeActivity" />
+        <activity android:name=".Activity.Login" />
+        <activity android:name=".Activity.IntroSliderActivity" />
+        <activity android:name=".Activity.SignUpActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Activity.GSTFile" />
+        <activity android:name=".Activity.ITRFile" />
+        <activity android:name=".Activity.UploadGST" />
+        <activity android:name=".Activity.ITRActivity" />
+        <activity android:name=".Activity.GSTActivity" />
+        <activity android:name=".Activity.Document" />
+        <activity android:name=".Activity.History" />
+        <activity android:name=".Activity.Notification" />
+        <activity android:name=".Activity.Feed" />
+        <activity android:name=".Activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

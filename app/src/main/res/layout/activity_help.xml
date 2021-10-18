@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Help">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixtydp"
+        android:background="@color/green2"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                app:tint="@color/white"
+                android:onClick="back"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/back_arrow"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:fontFamily="@font/metropolis_bold"
+                android:textSize="@dimen/eighteen"
+                android:layout_marginLeft="@dimen/twentydp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:gravity="center_vertical|end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_tickets"
+                android:textColor="@color/white"
+                android:onClick="viewticket"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textSize="@dimen/_11sdp"
+                android:drawableLeft="@drawable/ic_raise_ticket"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/seguisb"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center|left"
+            android:src="@drawable/ic_icon_material_slow_motion_video" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/video_tutorials"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twentydp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center|left"
+            android:src="@drawable/ic_icon_ionic_ios_help_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/fqa"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twentydp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center|left"
+            android:src="@drawable/ic_contact_us" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/contactus"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twentydp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center|left"
+            android:src="@drawable/ic_privacy_policy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/Privacy"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twentydp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center|left"
+            android:src="@drawable/ic_terms_and_conditions" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/termcondition"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twentydp"/>
+
+
+    </LinearLayout>
+ <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center|left"
+            android:src="@drawable/ic_raise_ticket" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/seguisb"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/raise_tickets"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twentydp"/>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
